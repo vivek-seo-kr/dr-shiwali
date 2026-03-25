@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Shiwali Homeopathy Clinic</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        sage: {
+                            50: '#f4f7f4',
+                            100: '#e7eee7',
+                            200: '#d0ddd0',
+                            300: '#a9c0a9',
+                            400: '#7da07d',
+                            500: '#5c825c',
+                            600: '#486748',
+                            700: '#3b533b',
+                            800: '#314431',
+                            900: '#293829',
+                            950: '#161e16',
+                        },
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        .selection\:bg-sage-200 ::selection { background-color: #d0ddd0; }
+        .backdrop-blur-md { backdrop-filter: blur(12px); }
+    </style>
+</head>
+<body class="min-h-screen bg-sage-50 selection:bg-sage-200 font-sans text-sage-900">
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent py-6">
+        <div class="container mx-auto px-6 max-w-7xl flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <div class="w-10 h-10 bg-sage-600 rounded-full flex items-center justify-center text-white">
+                    <span class="text-xl font-serif font-bold">S</span>
+                </div>
+                <span class="text-xl font-serif font-bold text-sage-900 hidden sm:block">Dr. Shiwali Clinic</span>
+            </div>
+            
+            <div class="hidden md:flex items-center gap-8">
+                <a href="#home" class="text-sm font-medium text-sage-700 hover:text-sage-900 transition-colors">Home</a>
+                <a href="#about" class="text-sm font-medium text-sage-700 hover:text-sage-900 transition-colors">About</a>
+                <a href="#specialties" class="text-sm font-medium text-sage-700 hover:text-sage-900 transition-colors">Specialties</a>
+                <a href="#testimonials" class="text-sm font-medium text-sage-700 hover:text-sage-900 transition-colors">Reviews</a>
+                <a href="#faqs" class="text-sm font-medium text-sage-700 hover:text-sage-900 transition-colors">FAQs</a>
+                <a href="#contact" class="px-5 py-2.5 bg-sage-600 text-white text-sm font-medium rounded-full hover:bg-sage-700 transition-all shadow-lg shadow-sage-200">Book Appointment</a>
+            </div>
+
+            <button id="menu-toggle" class="md:hidden text-sage-900">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed inset-0 z-40 bg-white pt-24 px-6 md:hidden hidden">
+        <div class="flex flex-col gap-6 text-center">
+            <a href="#home" class="mobile-link text-2xl font-serif text-sage-900">Home</a>
+            <a href="#about" class="mobile-link text-2xl font-serif text-sage-900">About</a>
+            <a href="#specialties" class="mobile-link text-2xl font-serif text-sage-900">Specialties</a>
+            <a href="#testimonials" class="mobile-link text-2xl font-serif text-sage-900">Reviews</a>
+            <a href="#faqs" class="mobile-link text-2xl font-serif text-sage-900">FAQs</a>
+            <a href="#contact" class="mobile-link mt-4 px-8 py-4 bg-sage-600 text-white text-lg font-medium rounded-full">Book Appointment</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative pt-24 pb-16 md:pt-40 md:pb-24 lg:pt-48 lg:pb-32 overflow-hidden">
+        <div class="absolute top-0 right-0 -z-10 w-1/2 h-full bg-sage-100/50 rounded-l-[100px] hidden lg:block"></div>
+        <div class="container mx-auto px-6 max-w-7xl">
+            <div class="flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
+                <div class="flex-1 text-center lg:text-left z-10">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sage-100 text-sage-700 text-[10px] sm:text-xs font-bold uppercase tracking-wider mb-6">
+                        <i data-lucide="star" class="w-3 h-3 fill-sage-700"></i>
+                        <span>5.0 Rated Clinic in Himachal Pradesh</span>
+                    </div>
+                    <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif font-bold text-sage-950 leading-[1.1] mb-6">
+                        Healing Naturally with <span class="text-sage-600 italic">Care & Precision.</span>
+                    </h1>
+                    <p class="text-base sm:text-lg text-sage-700 mb-8 lg:mb-10 max-w-xl mx-auto lg:mx-0 leading-relaxed">
+                        Dr. Shiwali Homeopathy Clinic provides specialized, side-effect-free treatments for chronic conditions, pediatric care, and holistic wellness in the heart of Himachal Pradesh.
+                    </p>
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                        <a href="#contact" class="w-full sm:w-auto px-8 py-4 bg-sage-600 text-white font-semibold rounded-full hover:bg-sage-700 transition-all shadow-xl shadow-sage-200 flex items-center justify-center gap-2 group">
+                            Book Appointment
+                            <i data-lucide="chevron-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                        <a href="#testimonials" class="w-full sm:w-auto px-8 py-4 bg-white text-sage-900 font-semibold rounded-full border border-sage-200 hover:border-sage-300 transition-all flex items-center justify-center gap-2">
+                            View Patient Success
+                        </a>
+                    </div>
+                    
+                    <div class="mt-10 lg:mt-12 flex flex-wrap items-center justify-center lg:justify-start gap-6 sm:gap-8">
+                        <div>
+                            <div class="text-2xl sm:text-3xl font-serif font-bold text-sage-900">5.0</div>
+                            <div class="text-[10px] text-sage-500 uppercase tracking-widest">Google Rating</div>
+                        </div>
+                        <div class="hidden sm:block w-px h-10 bg-sage-200"></div>
+                        <div>
+                            <div class="text-2xl sm:text-3xl font-serif font-bold text-sage-900">20+</div>
+                            <div class="text-[10px] text-sage-500 uppercase tracking-widest">Verified Reviews</div>
+                        </div>
+                        <div class="hidden sm:block w-px h-10 bg-sage-200"></div>
+                        <div>
+                            <div class="text-2xl sm:text-3xl font-serif font-bold text-sage-900">100%</div>
+                            <div class="text-[10px] text-sage-500 uppercase tracking-widest">Natural Care</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flex-1 relative w-full max-w-lg lg:max-w-none">
+                    <div class="relative z-10 rounded-[30px] sm:rounded-[40px] overflow-hidden shadow-2xl aspect-[4/5] lg:aspect-auto">
+                        <img 
+                            src="https://lh3.googleusercontent.com/p/AF1QipPpXXlODdQq90nQwHo31SjXZDlx8c5zZruKMRn-=s1360-w1360-h1020-rw" 
+                            alt="Dr. Shiwali Rana" 
+                            class="w-full h-full object-cover"
+                            referrerpolicy="no-referrer"
+                        >
+                    </div>
+                    <div class="absolute -bottom-6 -left-6 w-24 h-24 sm:w-32 sm:h-32 bg-sage-200 rounded-full -z-10 blur-2xl opacity-60"></div>
+                    <div class="absolute -top-6 -right-6 w-32 h-32 sm:w-48 sm:h-48 bg-sage-300 rounded-full -z-10 blur-3xl opacity-40"></div>
+                    
+                    <div class="absolute bottom-6 -left-4 sm:bottom-10 sm:-left-10 bg-white p-4 sm:p-6 rounded-2xl shadow-xl hidden xs:block max-w-[160px] sm:max-w-[200px]">
+                        <div class="flex items-center gap-2 mb-2">
+                            <div class="flex -space-x-2">
+                                <div class="w-6 h-6 sm:w-8 sm:h-8 rounded-full border-2 border-white bg-sage-100 overflow-hidden">
+                                    <img src="https://i.pravatar.cc/100?img=11" alt="Patient" referrerpolicy="no-referrer">
+                                </div>
+                                <div class="w-6 h-6 sm:w-8 sm:h-8 rounded-full border-2 border-white bg-sage-100 overflow-hidden">
+                                    <img src="https://i.pravatar.cc/100?img=12" alt="Patient" referrerpolicy="no-referrer">
+                                </div>
+                                <div class="w-6 h-6 sm:w-8 sm:h-8 rounded-full border-2 border-white bg-sage-100 overflow-hidden">
+                                    <img src="https://i.pravatar.cc/100?img=13" alt="Patient" referrerpolicy="no-referrer">
+                                </div>
+                            </div>
+                            <span class="text-[10px] sm:text-xs font-bold text-sage-900">+17 Photos</span>
+                        </div>
+                        <p class="text-[9px] sm:text-[10px] text-sage-500 leading-tight">Trusted by families across Himachal Pradesh for over 5 years.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-6 max-w-7xl">
+            <div class="flex flex-col lg:flex-row items-center gap-12 mb-16">
+                <div class="flex-1">
+                    <div class="relative">
+                        <div class="aspect-square rounded-[40px] overflow-hidden shadow-2xl border-8 border-sage-50">
+                            <img 
+                                src="https://lh3.googleusercontent.com/gps-cs-s/AHVAwerzAelrRmvu98_N5mS7fOX8lvgdinfYc6EEhoYkHP8_1I35ePdAfIIfsvowwcXSuyrHCo2MyRABajiBNO15bmQ0ray17n8ZjbaTf7jxoYeJK3J8o6n4LF1X_i8gJ7QzZGaAPAe27w=s1360-w1360-h1020-rw" 
+                                alt="Dr. Shiwali Homeopathy Clinic" 
+                                class="w-full h-full object-cover"
+                                referrerpolicy="no-referrer"
+                            >
+                        </div>
+                        <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-sage-100 rounded-full -z-10"></div>
+                    </div>
+                </div>
+                <div class="flex-[1.5] text-center lg:text-left">
+                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-sage-900 mb-6">A Truly Gifted Healer</h2>
+                    <p class="text-base sm:text-lg text-sage-600 leading-relaxed mb-6">
+                        Dr. Shiwali Rana is renowned for her in-depth understanding of medical issues and her polite, detailed approach to patient care. She believes in understanding the complete history of every patient to provide personalized, effective homeopathic solutions.
+                    </p>
+                    <p class="text-base sm:text-lg text-sage-600 leading-relaxed">
+                        With years of experience in treating chronic ailments, she has helped numerous patients recover from conditions like gallbladder stones, chronic ear infections, and liver disorders using gentle, natural remedies.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                <div class="p-6 md:p-8 rounded-3xl bg-sage-50 border border-sage-100 hover:shadow-xl transition-all">
+                    <div class="w-12 h-12 bg-white rounded-2xl flex items-center justify-center text-sage-600 shadow-sm mb-6">
+                        <i data-lucide="stethoscope" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-bold text-sage-900 mb-4">In-depth Diagnosis</h3>
+                    <p class="text-sage-600 text-sm leading-relaxed">Detailed questionnaires and thorough history-taking to understand the root cause of every ailment.</p>
+                </div>
+                
+                <div class="p-6 md:p-8 rounded-3xl bg-sage-50 border border-sage-100 hover:shadow-xl transition-all">
+                    <div class="w-12 h-12 bg-white rounded-2xl flex items-center justify-center text-sage-600 shadow-sm mb-6">
+                        <i data-lucide="shield-check" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-bold text-sage-900 mb-4">Zero Side Effects</h3>
+                    <p class="text-sage-600 text-sm leading-relaxed">Gentle medication that works with your body's natural healing processes without adverse reactions.</p>
+                </div>
+                
+                <div class="p-6 md:p-8 rounded-3xl bg-sage-50 border border-sage-100 hover:shadow-xl transition-all sm:col-span-2 lg:col-span-1">
+                    <div class="w-12 h-12 bg-white rounded-2xl flex items-center justify-center text-sage-600 shadow-sm mb-6">
+                        <i data-lucide="heart" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-bold text-sage-900 mb-4">Compassionate Care</h3>
+                    <p class="text-sage-600 text-sm leading-relaxed">A polite and helpful environment where patients feel heard and supported throughout their journey.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Specialties Section -->
+    <section id="specialties" class="py-16 md:py-24 bg-sage-50">
+        <div class="container mx-auto px-6 max-w-7xl">
+            <div class="flex flex-col md:flex-row justify-between items-center md:items-end mb-12 md:mb-16 gap-6 text-center md:text-left">
+                <div class="max-w-2xl">
+                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-sage-900 mb-4">Our Specialized Treatments</h2>
+                    <p class="text-sage-600">We specialize in treating chronic conditions that often find only temporary relief elsewhere.</p>
+                </div>
+                <a href="#contact" class="text-sage-600 font-semibold flex items-center gap-2 hover:text-sage-900 transition-colors shrink-0">
+                    View all services <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                </a>
+            </div>
+            
+            <div class="grid xs:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white p-6 sm:p-8 rounded-[32px] shadow-sm hover:shadow-xl transition-all border border-sage-100">
+                    <div class="text-sage-500 mb-6"><i data-lucide="shield-check" class="w-6 h-6"></i></div>
+                    <h3 class="text-lg sm:text-xl font-serif font-bold text-sage-900 mb-3">Ear Infections</h3>
+                    <p class="text-sage-500 text-sm leading-relaxed">Effective treatment for chronic ear issues with rapid recovery.</p>
+                </div>
+                <div class="bg-white p-6 sm:p-8 rounded-[32px] shadow-sm hover:shadow-xl transition-all border border-sage-100">
+                    <div class="text-sage-500 mb-6"><i data-lucide="heart" class="w-6 h-6"></i></div>
+                    <h3 class="text-lg sm:text-xl font-serif font-bold text-sage-900 mb-3">Gallbladder Health</h3>
+                    <p class="text-sage-500 text-sm leading-relaxed">Specialized care for gallbladder stones and sludge without surgery.</p>
+                </div>
+                <div class="bg-white p-6 sm:p-8 rounded-[32px] shadow-sm hover:shadow-xl transition-all border border-sage-100">
+                    <div class="text-sage-500 mb-6"><i data-lucide="stethoscope" class="w-6 h-6"></i></div>
+                    <h3 class="text-lg sm:text-xl font-serif font-bold text-sage-900 mb-3">Pediatric Care</h3>
+                    <p class="text-sage-500 text-sm leading-relaxed">Gentle homeopathic solutions for children's immunity and respiratory issues.</p>
+                </div>
+                <div class="bg-white p-6 sm:p-8 rounded-[32px] shadow-sm hover:shadow-xl transition-all border border-sage-100">
+                    <div class="text-sage-500 mb-6"><i data-lucide="shield-check" class="w-6 h-6"></i></div>
+                    <h3 class="text-lg sm:text-xl font-serif font-bold text-sage-900 mb-3">Liver Wellness</h3>
+                    <p class="text-sage-500 text-sm leading-relaxed">Holistic management of fatty liver and digestive disorders.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-16 md:py-24 bg-sage-900 text-white overflow-hidden relative">
+        <div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+            <div class="absolute top-20 left-10 w-48 h-48 sm:w-64 sm:h-64 border border-white rounded-full"></div>
+            <div class="absolute bottom-20 right-10 w-64 h-64 sm:w-96 sm:h-96 border border-white rounded-full"></div>
+        </div>
+        
+        <div class="container mx-auto px-6 relative z-10 max-w-7xl">
+            <div class="text-center mb-12 md:mb-20">
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-serif font-bold mb-6">Patient Success Stories</h2>
+                <div class="flex items-center justify-center gap-1 text-yellow-400 mb-4">
+                    <i data-lucide="star" class="w-4 h-4 sm:w-5 sm:h-5 fill-current"></i>
+                    <i data-lucide="star" class="w-4 h-4 sm:w-5 sm:h-5 fill-current"></i>
+                    <i data-lucide="star" class="w-4 h-4 sm:w-5 sm:h-5 fill-current"></i>
+                    <i data-lucide="star" class="w-4 h-4 sm:w-5 sm:h-5 fill-current"></i>
+                    <i data-lucide="star" class="w-4 h-4 sm:w-5 sm:h-5 fill-current"></i>
+                </div>
+                <p class="text-sm sm:text-base text-sage-300">5.0 average rating from 20+ verified Google reviews</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                <div class="bg-white/5 backdrop-blur-sm p-6 sm:p-8 rounded-3xl border border-white/10 flex flex-col">
+                    <i data-lucide="quote" class="w-8 h-8 sm:w-10 sm:h-10 text-sage-500 mb-6 opacity-50"></i>
+                    <p class="text-sm sm:text-base text-sage-100 italic mb-8 flex-grow leading-relaxed">"I had been dealing with an ear infection for the past two years. Dr. Shiwali helped me completely resolve my issue in just one week without any side effects."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 sm:w-12 sm:h-12 bg-sage-700 rounded-full flex items-center justify-center text-lg sm:text-xl font-serif font-bold shrink-0">C</div>
+                        <div>
+                            <div class="text-sm sm:text-base font-bold">Cherry y</div>
+                            <div class="text-[10px] sm:text-xs text-sage-400">2 years ago</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white/5 backdrop-blur-sm p-6 sm:p-8 rounded-3xl border border-white/10 flex flex-col">
+                    <i data-lucide="quote" class="w-8 h-8 sm:w-10 sm:h-10 text-sage-500 mb-6 opacity-50"></i>
+                    <p class="text-sm sm:text-base text-sage-100 italic mb-8 flex-grow leading-relaxed">"I was suffering from gall bladder stones and fatty liver since last 5 years. today i took ultrasound my all reports came normal. m so happy. all thanx to dr shivali."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 sm:w-12 sm:h-12 bg-sage-700 rounded-full flex items-center justify-center text-lg sm:text-xl font-serif font-bold shrink-0">S</div>
+                        <div>
+                            <div class="text-sm sm:text-base font-bold">Sapna Sharma</div>
+                            <div class="text-[10px] sm:text-xs text-sage-400">a year ago</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white/5 backdrop-blur-sm p-6 sm:p-8 rounded-3xl border border-white/10 flex flex-col">
+                    <i data-lucide="quote" class="w-8 h-8 sm:w-10 sm:h-10 text-sage-500 mb-6 opacity-50"></i>
+                    <p class="text-sm sm:text-base text-sage-100 italic mb-8 flex-grow leading-relaxed">"I was diagnosed with gallbladder sludge. On 2nd March 2024 I got my ultrasound done and the sludge is clear now. Thank you Dr. Shiwali for your support."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 sm:w-12 sm:h-12 bg-sage-700 rounded-full flex items-center justify-center text-lg sm:text-xl font-serif font-bold shrink-0">G</div>
+                        <div>
+                            <div class="text-sm sm:text-base font-bold">Gullivertrot 88</div>
+                            <div class="text-[10px] sm:text-xs text-sage-400">2 years ago</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 md:mt-16 text-center">
+                <a 
+                    href="https://share.google/lMKQU0DfCr9fTbDx1" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-white text-sage-900 text-sm sm:text-base font-bold rounded-full hover:bg-sage-100 transition-all"
+                >
+                    Read More on Google
+                    <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQs Section -->
+    <section id="faqs" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-6 max-w-3xl">
+            <div class="text-center mb-12 md:mb-16">
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-sage-900 mb-6">Frequently Asked Questions</h2>
+                <p class="text-sage-600">Common questions about homeopathy and our clinic's approach.</p>
+            </div>
+            
+            <div class="space-y-4">
+                <div class="faq-item border border-sage-100 rounded-2xl overflow-hidden">
+                    <button class="faq-toggle w-full flex items-center justify-between p-6 text-left hover:bg-sage-50 transition-colors">
+                        <span class="font-bold text-sage-900 pr-4">What is Homeopathy and how does it work?</span>
+                        <i data-lucide="plus" class="faq-icon w-5 h-5 text-sage-600 shrink-0"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-sage-600 text-sm leading-relaxed border-t border-sage-50 pt-4">
+                        Homeopathy is a natural system of medicine that uses highly diluted substances to trigger the body's own healing mechanisms. It treats the individual as a whole, considering physical, mental, and emotional aspects.
+                    </div>
+                </div>
+                <div class="faq-item border border-sage-100 rounded-2xl overflow-hidden">
+                    <button class="faq-toggle w-full flex items-center justify-between p-6 text-left hover:bg-sage-50 transition-colors">
+                        <span class="font-bold text-sage-900 pr-4">Are homeopathic medicines safe for children?</span>
+                        <i data-lucide="plus" class="faq-icon w-5 h-5 text-sage-600 shrink-0"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-sage-600 text-sm leading-relaxed border-t border-sage-50 pt-4">
+                        Yes, homeopathic medicines are extremely safe for children and infants. They are non-toxic, have no side effects, and are easy to administer due to their sweet taste.
+                    </div>
+                </div>
+                <div class="faq-item border border-sage-100 rounded-2xl overflow-hidden">
+                    <button class="faq-toggle w-full flex items-center justify-between p-6 text-left hover:bg-sage-50 transition-colors">
+                        <span class="font-bold text-sage-900 pr-4">How long does it take to see results?</span>
+                        <i data-lucide="plus" class="faq-icon w-5 h-5 text-sage-600 shrink-0"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-sage-600 text-sm leading-relaxed border-t border-sage-50 pt-4">
+                        The duration varies depending on the condition. Acute issues like a cold can show results in hours, while chronic conditions like gallbladder stones or liver issues may take a few months of consistent treatment.
+                    </div>
+                </div>
+                <div class="faq-item border border-sage-100 rounded-2xl overflow-hidden">
+                    <button class="faq-toggle w-full flex items-center justify-between p-6 text-left hover:bg-sage-50 transition-colors">
+                        <span class="font-bold text-sage-900 pr-4">Can I take homeopathic medicine along with my regular medications?</span>
+                        <i data-lucide="plus" class="faq-icon w-5 h-5 text-sage-600 shrink-0"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-sage-600 text-sm leading-relaxed border-t border-sage-50 pt-4">
+                        In most cases, yes. Homeopathic medicines generally do not interfere with conventional drugs. However, it's always best to inform Dr. Shiwali about any other medications you are currently taking.
+                    </div>
+                </div>
+                <div class="faq-item border border-sage-100 rounded-2xl overflow-hidden">
+                    <button class="faq-toggle w-full flex items-center justify-between p-6 text-left hover:bg-sage-50 transition-colors">
+                        <span class="font-bold text-sage-900 pr-4">Do you provide online consultations?</span>
+                        <i data-lucide="plus" class="faq-icon w-5 h-5 text-sage-600 shrink-0"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-sage-600 text-sm leading-relaxed border-t border-sage-50 pt-4">
+                        Yes, we provide online consultations for patients who cannot visit our clinic in Himachal Pradesh. Medicines can be prescribed and managed remotely.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-6 max-w-7xl">
+            <div class="bg-sage-50 rounded-[32px] sm:rounded-[48px] overflow-hidden shadow-2xl flex flex-col lg:flex-row">
+                <div class="flex-1 p-8 sm:p-12 md:p-16 lg:p-20">
+                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-sage-900 mb-6 md:mb-8">Get in Touch</h2>
+                    <p class="text-base sm:text-lg text-sage-600 mb-10 md:mb-12">Ready to start your journey to natural health? Visit our clinic or call us to schedule an appointment.</p>
+                    
+                    <div class="space-y-6 md:space-y-8">
+                        <div class="flex items-start gap-4 sm:gap-6">
+                            <div class="w-10 h-10 sm:w-12 sm:h-12 bg-white rounded-xl sm:rounded-2xl flex items-center justify-center text-sage-600 shadow-sm shrink-0">
+                                <i data-lucide="phone" class="w-5 h-5 sm:w-6 sm:h-6"></i>
+                            </div>
+                            <div>
+                                <div class="text-[10px] text-sage-400 uppercase tracking-widest font-bold mb-1">Call Us</div>
+                                <div class="text-lg sm:text-xl font-bold text-sage-900 hover:text-sage-600 transition-colors cursor-pointer">Available for Consultation</div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-4 sm:gap-6">
+                            <div class="w-10 h-10 sm:w-12 sm:h-12 bg-white rounded-xl sm:rounded-2xl flex items-center justify-center text-sage-600 shadow-sm shrink-0">
+                                <i data-lucide="map-pin" class="w-5 h-5 sm:w-6 sm:h-6"></i>
+                            </div>
+                            <div>
+                                <div class="text-[10px] text-sage-400 uppercase tracking-widest font-bold mb-1">Location</div>
+                                <div class="text-lg sm:text-xl font-bold text-sage-900">Himachal Pradesh, India</div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-4 sm:gap-6">
+                            <div class="w-10 h-10 sm:w-12 sm:h-12 bg-white rounded-xl sm:rounded-2xl flex items-center justify-center text-sage-600 shadow-sm shrink-0">
+                                <i data-lucide="clock" class="w-5 h-5 sm:w-6 sm:h-6"></i>
+                            </div>
+                            <div>
+                                <div class="text-[10px] text-sage-400 uppercase tracking-widest font-bold mb-1">Clinic Hours</div>
+                                <div class="text-lg sm:text-xl font-bold text-sage-900">Mon - Sat: 10:00 AM - 6:00 PM</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-12 md:mt-16 flex gap-4 justify-center sm:justify-start">
+                        <a href="#" class="w-10 h-10 sm:w-12 sm:h-12 bg-white rounded-full flex items-center justify-center text-sage-600 hover:bg-sage-600 hover:text-white transition-all shadow-sm">
+                            <i data-lucide="instagram" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-sage-600 hover:bg-sage-600 hover:text-white transition-all shadow-sm">
+                            <i data-lucide="facebook" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-sage-600 hover:bg-sage-600 hover:text-white transition-all shadow-sm">
+                            <i data-lucide="mail" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="flex-1 bg-sage-200 relative min-h-[300px] sm:min-h-[400px]">
+                    <div class="absolute inset-0 grayscale opacity-80 hover:grayscale-0 transition-all duration-700">
+                        <img 
+                            src="https://picsum.photos/seed/himachal/1000/1000" 
+                            alt="Himachal Landscape" 
+                            class="w-full h-full object-cover"
+                            referrerpolicy="no-referrer"
+                        >
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-sage-900/40 to-transparent"></div>
+                    <div class="absolute bottom-6 left-6 right-6 sm:bottom-12 sm:left-12 sm:right-12 bg-white/90 backdrop-blur-md p-6 sm:p-8 rounded-2xl sm:rounded-3xl shadow-2xl">
+                        <h3 class="text-xl sm:text-2xl font-serif font-bold text-sage-900 mb-2">Visit Our Clinic</h3>
+                        <p class="text-sage-600 text-xs sm:text-sm mb-6">Experience healing in the serene environment of Himachal Pradesh.</p>
+                        <a 
+                            href="https://share.google/lMKQU0DfCr9fTbDx1" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            class="w-full py-3 sm:py-4 bg-sage-600 text-white text-sm sm:text-base font-bold rounded-xl flex items-center justify-center gap-2 hover:bg-sage-700 transition-all"
+                        >
+                            <i data-lucide="map-pin" class="w-4 h-4"></i>
+                            Get Directions
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 bg-sage-50 border-t border-sage-100">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+                <div class="flex items-center gap-2">
+                    <div class="w-8 h-8 bg-sage-600 rounded-full flex items-center justify-center text-white">
+                        <span class="text-sm font-serif font-bold">S</span>
+                    </div>
+                    <span class="text-lg font-serif font-bold text-sage-900">Dr. Shiwali Homeopathy</span>
+                </div>
+                
+                <div class="flex gap-8 text-sm text-sage-500">
+                    <a href="#" class="hover:text-sage-900 transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-sage-900 transition-colors">Terms of Service</a>
+                    <a href="#" class="hover:text-sage-900 transition-colors">Sitemap</a>
+                </div>
+                
+                <div class="text-sm text-sage-400">
+                    © 2026 Dr. Shiwali Homeopathy Clinic. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Navbar Scroll Effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-white/80', 'backdrop-blur-md', 'shadow-sm');
+                navbar.classList.remove('bg-transparent', 'py-6');
+                navbar.classList.add('py-3');
+            } else {
+                navbar.classList.remove('bg-white/80', 'backdrop-blur-md', 'shadow-sm', 'py-3');
+                navbar.classList.add('bg-transparent', 'py-6');
+            }
+        });
+
+        // Mobile Menu Toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            const icon = menuToggle.querySelector('i');
+            if (mobileMenu.classList.contains('hidden')) {
+                icon.setAttribute('data-lucide', 'menu');
+            } else {
+                icon.setAttribute('data-lucide', 'x');
+            }
+            lucide.createIcons();
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuToggle.querySelector('i').setAttribute('data-lucide', 'menu');
+                lucide.createIcons();
+            });
+        });
+
+        // FAQ Toggle Logic
+        const faqToggles = document.querySelectorAll('.faq-toggle');
+        faqToggles.forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                const item = toggle.parentElement;
+                const content = item.querySelector('.faq-content');
+                const icon = toggle.querySelector('.faq-icon');
+                
+                const isOpen = !content.classList.contains('hidden');
+                
+                // Close all other FAQs
+                document.querySelectorAll('.faq-content').forEach(c => c.classList.add('hidden'));
+                document.querySelectorAll('.faq-icon').forEach(i => {
+                    i.setAttribute('data-lucide', 'plus');
+                });
+
+                if (!isOpen) {
+                    content.classList.remove('hidden');
+                    icon.setAttribute('data-lucide', 'minus');
+                } else {
+                    content.classList.add('hidden');
+                    icon.setAttribute('data-lucide', 'plus');
+                }
+                lucide.createIcons();
+            });
+        });
+    </script>
+</body>
+</html>
